@@ -21,3 +21,5 @@ print(d1)
 #30 81.4 0.87
 
 ggplot(d1,aes(day,inr,label=inr))+geom_bar(stat = "identity")+geom_text(size = 3, vjust= 2, color ="white")+theme_gray()+ggtitle("Base value of EUR is 1")+labs(x='Days of Jan 2019',y='Currency Valuation of INR')
+
+ggplot(d1,aes(day,gbp,label=gbp))+geom_bar(stat = "identity")+geom_text(size = 3, vjust= 2, color ="white")+theme_gray()+ggtitle("Base value of EUR is 1")+labs(x='Days of Jan 2019',y='Currency Valuation of GBP')
