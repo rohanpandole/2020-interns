@@ -17,12 +17,15 @@ object Test
     val dayColumn = nestedDays.columns.map(c => s"'$c', `$c`").mkString(", ")
 
     val filteredData = nestedDays.selectExpr(s"stack(${nestedDays.columns.length}, $dayColumn) as (`yyyy-MM-dd`, value)")
-      .filter(s"`yyyy-MM-dd` between '2019-01-02' and '2019-01-04'")
-      .selectExpr("`yyyy-MM-dd`", "value.*")
+      .filter(s"`yyyy-mm-dd` between '2019-01-02' and '2019-01-04'")
+      .selectExpr("`yyyy-mm-dd`", "value.*")
 
     filteredData.printSchema()
     filteredData.show()
 
+    filteredData.select("yyyy-mm-dd","INR","GBP").show(false)
+
+    spa.stop()
 
   }
 
