@@ -1,5 +1,5 @@
 setwd("/home/rohan/Git/2020-interns")
-d1<-read.csv("/home/rohan/Git/2020-interns/processedData.csv")
+d1<-read.csv("/home/rohan/Git/2020-interns/processedJsonData/part-00000-29e2168e-0e86-498f-99c0-251d77d6c1a6-c000.csv")
 
  print(d1)
 #day     inr     gbp
